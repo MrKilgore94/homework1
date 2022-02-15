@@ -34,7 +34,7 @@ nums.shift()
 
 // looping over a arry
 
-let names = [Jon, Jill, Sally, Mike]
+let names = ['Jon', 'Jill', 'Sally', 'Mike']
 
 const sayHello = (person)=>{
   console.log(`Hello ${person}`)
