@@ -31,3 +31,10 @@ function introducePerson(person){
 //pass function an argument (person)^^
 introducePerson('jon')
 introducePerson('jill')
+
+function add(num1, num2){
+  return num1 + num2
+
+}
+
+console.log(add(1,1))
