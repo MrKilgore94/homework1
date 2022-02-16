@@ -110,28 +110,16 @@ let newString = myString.split(" ");
 
 // 6. write a function that takes a person object {firstname: 'joe', lastname: 'shmoe', age: 50} and returns a formatted string "joe shmoe is 50 years old"
 
-let frank = {
-  name: "Frank Castle",
-  age: 40,
-};
-let john = {
-  name: "John Wick",
-  age: 44,
-};
-let ellen = {
-  name: "Ellen Ripley",
-  age: 26,
-};
-let lara = {
-  name: "Lara Croft",
-  age: 25,
-};
+
+let frank = {name: "Frank Castle", age: 40};
+let john = {name: "John Wick", age: 44};
+let ellen = {name: "Ellen Ripley",age: 26};
+let lara = {name: "Lara Croft", age: 25};
 
 console.log(frank.name + " is " + frank.age + " years old!");
 console.log(john.name + " is " + john.age + " years old!");
 console.log(ellen.name + " is " + ellen.age + " years old!");
 console.log(lara.name + " is " + lara.age + " years old!");
-
 
 
 // let john = {firstname: 'John', lastname: 'Wick', age: 44}
