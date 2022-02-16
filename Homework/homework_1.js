@@ -97,8 +97,8 @@ console.log("How many vowels are in this sentence " + count2)
 
 // 4. Write a function that takes a math operator, as a string, ('*','/','+','-') and two numbers and returns the result
 
-let myString = "225 + 15 - 10"
-let newString = myString.split(" ");
+
+
 
 //--------------------------------------------------------------------------------
 
@@ -122,15 +122,9 @@ console.log(ellen.name + " is " + ellen.age + " years old!");
 console.log(lara.name + " is " + lara.age + " years old!");
 
 
-// let john = {firstname: 'John', lastname: 'Wick', age: 44}
-// let frank = {firstname: 'Frank', lastname: 'Castle', age: 40}
-// let ellen = {firstname: 'Ellen', lastname: 'Ripley', age: 26}
-// let   = {firstname: '', lastname: '', age: }
 
 
-// const sayHello = (person)=>{
-//   console.log(`${person} "is" ${age} "years old"`)
-//}
+
 
 //--------------------------------------------------------------------------------
 
@@ -141,6 +135,16 @@ console.log(lara.name + " is " + lara.age + " years old!");
 //--------------------------------------------------------------------------------
 
 // 8. write a function that swaps the last and first items of an array 
+const swap1 = (arr)=>{
+  const cloneArr = [...arr]
+  swap(cloneArr)
+  return cloneArr
+}
+
+let nums = [2,3,4,5]
+let swapedNums = swap1(nums)
+console.log('nums: ', nums)
+console.log('swapedNums: ', swapedNums)
 
 
 

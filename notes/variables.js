@@ -1,3 +1,10 @@
+// variables
+// let, const, var
+// let(prefered) and var are very similar
+//const dosent change
+
+
+
 // Declaring Variables
 let techName;
 let version;
