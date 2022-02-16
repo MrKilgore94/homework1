@@ -64,14 +64,15 @@ if(isOdd(num ='3648392')){
 
 // 1. Write a function that takes a positive number and prints all even numbers from 0 – number
 
-    const printUpTo = (num)=>{
-        for(let i = 0; i<= num; i++){
-            if(i %2 == 0){
-            console.log(i)
-            }
-        }
-    }
-
+const printUpTo = (num)=>{
+  for(let i = 0; i<= num; i++){
+      if(i %2 == 0){
+      console.log(i)
+      }
+  }
+}
+console.log('---')
+printUpTo(30)
 
 
 //--------------------------------------------------------------------------------
@@ -95,6 +96,7 @@ console.log("How many vowels are in this sentence " + count2)
 //--------------------------------------------------------------------------------
 
 // 4. Write a function that takes a math operator, as a string, ('*','/','+','-') and two numbers and returns the result
+
 let myString = "225 + 15 - 10"
 let newString = myString.split(" ");
 
@@ -108,7 +110,39 @@ let newString = myString.split(" ");
 
 // 6. write a function that takes a person object {firstname: 'joe', lastname: 'shmoe', age: 50} and returns a formatted string "joe shmoe is 50 years old"
 
+let frank = {
+  name: "Frank Castle",
+  age: 40,
+};
+let john = {
+  name: "John Wick",
+  age: 44,
+};
+let ellen = {
+  name: "Ellen Ripley",
+  age: 26,
+};
+let lara = {
+  name: "Lara Croft",
+  age: 25,
+};
 
+console.log(frank.name + " is " + frank.age + " years old!");
+console.log(john.name + " is " + john.age + " years old!");
+console.log(ellen.name + " is " + ellen.age + " years old!");
+console.log(lara.name + " is " + lara.age + " years old!");
+
+
+
+// let john = {firstname: 'John', lastname: 'Wick', age: 44}
+// let frank = {firstname: 'Frank', lastname: 'Castle', age: 40}
+// let ellen = {firstname: 'Ellen', lastname: 'Ripley', age: 26}
+// let   = {firstname: '', lastname: '', age: }
+
+
+// const sayHello = (person)=>{
+//   console.log(`${person} "is" ${age} "years old"`)
+//}
 
 //--------------------------------------------------------------------------------
 

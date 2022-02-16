@@ -48,6 +48,13 @@ arr.forEach((char)=>{
 
 
 //while loop
+
+while (i < 10) {
+  text += "The number is " + i;
+  i++;
+}
+
+
 let i = 0
 while(i<=10){
   if(i === 5){

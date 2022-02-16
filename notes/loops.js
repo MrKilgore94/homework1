@@ -33,3 +33,38 @@ for (var x = 0; x <= 15; x++){
     console.log(x + " is odd");
   }
 }
+const evenOrOdd = (num)=>{
+  if(num % 2 === 0){
+      return 'even'
+  }else{
+      return 'odd'
+  }
+}
+
+const isOdd = (num) =>{
+  return num % 2 === 0
+}
+
+if(isOdd(2)){
+  console.log('is Odd')
+} else {
+  console.log('is Even')
+}
+
+const arr1 = [1, 2, 3, 4, 5]
+
+size1 = arr1.length;
+
+document.write("Array 1: <br>");
+
+printArray(arr1, size1);
+
+document.write("Sum of elements of the array: " + findSum(arr1, size1) + "<br>");
+
+const arr2 = [34, 56, 10, -2, 5, 99]
+
+size2 = arr2.length;
+
+document.write("Array 2: <br>");
+
+printArray(arr2, size2);
