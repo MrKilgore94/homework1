@@ -1,3 +1,5 @@
+//~~~~~~~~~~~~~~~~~~~~~General Notes~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 // name, age, dob, eye color, friends, weight, income
 
 // Primitive (Primary or Value) data type
@@ -11,12 +13,16 @@
 // string - sequence of characters
 // '', "", ``
 let string1 = "asdfasdf";
+//--------------------------------------------------------------------------------
+
 
 //string interpolation
 let bt = `1+1  = ${1 + 1}`;
 console.log(bt);
 
 console.log(typeof string1);
+//--------------------------------------------------------------------------------
+
 
 // Number
 let age = 21;
@@ -26,6 +32,8 @@ console.log(typeof 21.0);
 
 let dob = "6/27/1983";
 console.log(typeof dob);
+//--------------------------------------------------------------------------------
+
 
 // other types in js
 console.log(typeof undefined);
@@ -34,6 +42,8 @@ console.log(typeof NaN);
 
 console.log(typeof true);
 console.log(typeof false);
+//--------------------------------------------------------------------------------
+
 
 // Arrays - index at 0 lists
 const people = ["John", "Jill", "Joe"];
@@ -41,6 +51,8 @@ const people = ["John", "Jill", "Joe"];
 console.log(people);
 console.log(people[0]);
 console.log(people[2]);
+//--------------------------------------------------------------------------------
+
 
 // Objects - key value pairstore
 let person = {
@@ -58,17 +70,20 @@ console.log(person.age);
 // if(condition){
 //     //run if condition is truthy 
 // } else {
-  //     //run if condition is falsey  
+//       //run if condition is falsey  
 // }
 
 // if(condition1){
 //     //run if condition1 is truthy 
 // } else if(condition1)
-    //run if condition is truthy 
-//else {
-  //     //run if condition is falsey  
+//     run if condition is truthy 
+// else {
+//       //run if condition is falsey  
 // }
 
+
+//--------------------------------------------------------------------------------
+//~~~~~~~~~~~~~~~~~~~~~~~~~Stop light demo~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 let lightColor = 'red'
 
 
@@ -106,6 +121,9 @@ if((lightColor === 'green' || lightColor === 'yellow') && safeToCross){
 } else {
     console.log('stop')
 }
+
+
+//--------------------------------------------------------------------------------
 
 // falsey values
 if(0){
@@ -157,4 +175,4 @@ if({}){
 
 if(-234){
   console.log('-234 is truthy')
-}
+} 
