@@ -49,13 +49,6 @@ console.log(returnValueEach) //
 // GOES THROUGH EACH THING AND PERFORMS A FUNCTION
 // THAT IT PERFORMS IT COLLECTS THE RETURN OF THAT IN
 // A NEW ARRAY AN RETURNS THAT ARRAY
-let returnValueMap = characters.map((c)=>{
-  return {name: c.name, eye_color:c.eye_color}
-})
-console.log('return of map')
-console.log(returnValueMap)
-
-
 
 
 //1. Get array of all names
@@ -113,14 +106,7 @@ console.log(name1)
 // FUNCTION AND CURRENT ITEM
 // RETURN THE FINAL RETURN OF FUNCTION(ACUMM)
 // THE TYPE IT CAN RETURN IS ANYTYPE
-// let nums = [2,3,4,5,6]
-// let sum = nums.reduce((accum, num)=>{
-//   console.log('accum:', accum)
-//   console.log('num:', num)
-//   return accum + num
-// },0)
-// console.log('return of reduce')
-// console.log(sum)
+
 
 //1. Get total mass of all characters
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 2.1~~~~~~~~~~~~~~~~~~~~~~~~~~~')
@@ -194,17 +180,15 @@ console.log(characterNumber)
 // IF IT RETURNS FALSE IT DOESN'T
 // A NEW FILTERED ARRAY AN RETURNS THAT ARRAY
 
-let allOver100 = characters.filter((c)=>{
-  return c.mass >= 100
-})
-console.log('return of filter')
-console.log(allOver100)
-
 
 
 //1. Get characters with mass greater than 100
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 3.1~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+let allMassOver100 = characters.filter((c)=>{
+  return c.mass >= 100
+})
 
+console.log(allMassOver100)
 
 
 
@@ -213,7 +197,11 @@ console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 3.1~~~~~~~~~~~~~~~~~~~~~~~~~~
 //2. Get characters with height less than 200
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 3.2~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 
+let heightOver200 = characters.filter((c)=>{
+  return c.height < 200
+})
 
+console.log(heightOver200)
 
 
 //--------------------------------------------------------------------------------
@@ -221,56 +209,60 @@ console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 3.2~~~~~~~~~~~~~~~~~~~~~~~~~~
 //3. Get all male characters
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 3.3~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 
+let allMale = characters.filter((c)=>{
+  return c.gender === 'male'
+})
 
-
+console.log(allMale)
 
 //--------------------------------------------------------------------------------
 
 //4. Get all female characters
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 3.4~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 
+let allFemale = characters.filter((c)=>{
+  return c.gender === 'female'
+})
 
+console.log(allFemale)
 
 
 //--------------------------------------------------------------------------------
 
 
-//***FIND***
-// ONLY FIND ONE MATCH 
-// GOES THROUGH EACH THING AND PERFORMS A FUNCTION
-// IF THAT RETURNS TRUE IT PUSHES THE ITEM IN THE NEW ARRAY
-// IF IT RETURNS FALSE IT DOESN'T
-// THE FIRST MATCH IT FINDS || UNDEFINED IF NO MATCH FOUND
-
-let firstOver100 = characters.find((c)=>{
-  return c.mass >= 100
-})
-console.log('return of find')
-console.log(firstOver100)
 
 //***SORT***
+
+//1. Sort by mass
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 4.1~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 characters.sort((a,b)=>{
-  if(a.name > b.name){
+  if(a.mass > b.mass){
       return 1
   }
-  if(a.name < b.name){
+  if(a.mass < b.mass){
       return -1
   }
   return 0
 })
-console.log('return of sort')
+
 console.log(characters)
-
-//1. Sort by mass
-console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 4.1~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-
 
 
 //--------------------------------------------------------------------------------
 
 //2. Sort by height
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 4.2~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+characters.sort((a,b)=>{
+  if(a.height > b.height){
+      return 1
+  }
+  if(a.height < b.height){
+      return -1
+  }
+  return 0
+})
 
+console.log(characters)
 
 
 //--------------------------------------------------------------------------------
@@ -296,10 +288,26 @@ console.log(characters)
 //4. Sort by gender
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 4.4~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 
+characters.sort((a,b)=>{
+  if(a.gender > b.gender){
+      return 1
+  }
+  if(a.gender < b.gender){
+      return -1
+  }
+  return 0
+})
+
+console.log(characters)
 
 
 //--------------------------------------------------------------------------------
-
+//***FIND***
+// ONLY FIND ONE MATCH 
+// GOES THROUGH EACH THING AND PERFORMS A FUNCTION
+// IF THAT RETURNS TRUE IT PUSHES THE ITEM IN THE NEW ARRAY
+// IF IT RETURNS FALSE IT DOESN'T
+// THE FIRST MATCH IT FINDS || UNDEFINED IF NO MATCH FOUND
 
 //***Bonus***/
 //***EVERY***
