@@ -59,9 +59,52 @@ console.log(returnValueMap)
 
 
 //1. Get array of all names
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 1.1~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+let name = characters.map((c)=>{
+  return {name: c.name}
+})
+
+console.log(name)
+
+
+
+
+
+//--------------------------------------------------------------------------------
+
 //2. Get array of all heights
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 1.2~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+let height = characters.map((c)=>{
+  return {height:c.height}
+})
+
+console.log(height)
+
+
+
+//--------------------------------------------------------------------------------
+
 //3. Get array of objects with just name and height properties
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 1.3~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+let nameHeight = characters.map((c)=>{
+  return {name: c.name, height:c.height}
+})
+
+console.log(nameHeight)
+//--------------------------------------------------------------------------------
+
 //4. Get array of all first names
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 1.4~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+let name1 = characters.map((c)=>{
+  return {name: c.name.split(' ')[0]}
+})
+
+console.log(name1)
+
+
+
+//--------------------------------------------------------------------------------
 
 //***REDUCE***
 //
@@ -70,19 +113,79 @@ console.log(returnValueMap)
 // FUNCTION AND CURRENT ITEM
 // RETURN THE FINAL RETURN OF FUNCTION(ACUMM)
 // THE TYPE IT CAN RETURN IS ANYTYPE
-let nums = [2,3,4,5,6]
-let sum = nums.reduce((accum, num)=>{
-  console.log('accum:', accum)
-  console.log('num:', num)
-  return accum + num
-},0)
-console.log('return of reduce')
-console.log(sum)
+// let nums = [2,3,4,5,6]
+// let sum = nums.reduce((accum, num)=>{
+//   console.log('accum:', accum)
+//   console.log('num:', num)
+//   return accum + num
+// },0)
+// console.log('return of reduce')
+// console.log(sum)
 
 //1. Get total mass of all characters
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 2.1~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+let sum1 = characters.reduce((accum, characterWeight)=>{
+  console.log('the current weight is:', accum)
+  console.log('plus:', characterWeight.mass)
+  return accum + characterWeight.mass
+},0)
+
+console.log(`The total weight is ${sum1}!`)
+
+//--------------------------------------------------------------------------------
+
 //2. Get total height of all characters
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 2.2~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+let sum2 = characters.reduce((accum, characterHeight)=>{
+  console.log('num:', characterHeight.height)
+  return accum + characterHeight.height
+},0)
+
+console.log(sum2 + ', that would be REALLY tall')
+
+
+//--------------------------------------------------------------------------------
+
 //3. Get total number of characters by eye color
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 2.3~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+let c2 = characters.reduce((accum, char) =>{
+  if(char.eye_color === 'brown'){
+    accum.brown +=1
+    return accum
+
+  }
+else if (char.eye_color === 'blue'){
+  accum.blue +=1
+  return accum
+}
+else if (char.eye_color === 'yellow'){
+  accum.yellow +=1
+  return accum
+}
+}, {brown:0, blue:0, yellow:0})
+
+console.log(c2)
+
+
+//--------------------------------------------------------------------------------
+
 //4. Get total number of characters in all the character names
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 2.4~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+let characterNumber = characters.reduce((accum, c)=>{
+  let numberChara = c.name.length-1
+  return accum + numberChara
+},0)
+
+console.log(characterNumber)
+
+
+
+//--------------------------------------------------------------------------------
+
 
 //***FILTER***
 // REMOVE ITEMS
@@ -100,9 +203,37 @@ console.log(allOver100)
 
 
 //1. Get characters with mass greater than 100
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 3.1~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+
+
+
+//--------------------------------------------------------------------------------
+
 //2. Get characters with height less than 200
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 3.2~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+
+
+
+//--------------------------------------------------------------------------------
+
 //3. Get all male characters
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 3.3~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+
+
+
+//--------------------------------------------------------------------------------
+
 //4. Get all female characters
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Question 3.4~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+
+
+
+//--------------------------------------------------------------------------------
+
 
 //***FIND***
 // ONLY FIND ONE MATCH 
